@@ -4,7 +4,7 @@ import sochtaHoon from "../assets/Sochta-Hoon-Ke-Woh-Kitne-Masoom-Thay.mp3";
 import tumheinDillagi from "../assets/Tumhein Dillagi Bhool Jaani Padegi.mp3";
 import kaliKali from "../assets/Kali-Kali-Zulfon-Ke-Phande-Nah-Dalo.mp3";
 import mereRashkeQamar from "../assets/Mere-Rashke-e-Qamar.mp3";
-import sansonKiMala from "../assets/sanson-ki-mala-pey.mp3";
+import sansonKiMala from "../assets/Sanson-Ki-Mala-Pey.mp3";
 import mastNazroon from "../assets/Mast-Nazroon-se-Allah-Bachhae.mp3";
 import kinnaSona from "../assets/Kinna-Sohna-Tainu.mp3";
 import sanuEkpal from "../assets/Sanu-Ik-Pal-Chain-Na-Aawe.mp3";
