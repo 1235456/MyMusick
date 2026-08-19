@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { SONGS } from "../data/songs";
 import SongRow from "./SongRow";
 
 export default function SongList({ currentId, isPlaying, onPlaySong }) {
+  const [showAll, setShowAll] = useState(false);
+  const visibleSongs = showAll ? SONGS : SONGS.slice(0, 6);
+
   return (
     <section id="songs" className="mr-section">
       <div className="mr-section-head">
@@ -13,7 +17,7 @@ export default function SongList({ currentId, isPlaying, onPlaySong }) {
       </div>
 
       <div className="mr-songs">
-        {SONGS.map((song, i) => (
+        {visibleSongs.map((song, i) => (
           <SongRow
             key={song.id}
             song={song}
@@ -24,6 +28,12 @@ export default function SongList({ currentId, isPlaying, onPlaySong }) {
           />
         ))}
       </div>
+
+      {SONGS.length > 6 && !showAll && (
+        <button className="mr-songs-more" type="button" onClick={() => setShowAll(true)}>
+          Show more songs
+        </button>
+      )}
     </section>
   );
 }

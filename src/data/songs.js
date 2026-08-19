@@ -1,19 +1,28 @@
-// All tracks stream via YouTube's embedded player — nothing is hosted in this app.
-// Rights remain with Oriental Star Agencies, Real World Records, EMI, Hi-Tech Music
-// and the Khan family. Details sourced from public album/label listings.
+
 
 import sochtaHoon from "../assets/Sochta-Hoon-Ke-Woh-Kitne-Masoom-Thay.mp3";
 import tumheinDillagi from "../assets/Tumhein Dillagi Bhool Jaani Padegi.mp3";
 import kaliKali from "../assets/Kali-Kali-Zulfon-Ke-Phande-Nah-Dalo.mp3";
 import mereRashkeQamar from "../assets/Mere-Rashke-e-Qamar.mp3";
 import sansonKiMala from "../assets/sanson-ki-mala-pey.mp3";
+import mastNazroon from "../assets/Mast-Nazroon-se-Allah-Bachhae.mp3";
+import kinnaSona from "../assets/Kinna-Sohna-Tainu.mp3";
+import sanuEkpal from "../assets/Sanu-Ik-Pal-Chain-Na-Aawe.mp3";
+import dilPeZakham from "../assets/Dil-Pe-Zakham-Khaate-Hain.mp3";
+import unkeAndaz from "../assets/Unke Andaz e Karam.mp3";
+
 
 export const SONGS = [
-  { id: "sochta-hoon-original", title: "Sochta Hoon Ke Woh Kitne Masoom Thay", tag: "Original · Qawwali", note: "Local recording", audioSrc: sochtaHoon },
-  { id: "tumhein-dillagi-original", title: "Tumhein Dillagi Bhool Jaani Padegi", tag: "Original · Ghazal", note: "Local recording", audioSrc: tumheinDillagi },
-  { id: "kali-kali-original", title: "Kali Kali Zulfon Ke Phande Na Dalo", tag: "Original · Qawwali", note: "Local recording", audioSrc: kaliKali },
-  { id: "mere-rashke-qamar-original", title: "Mere Rashke-e-Qamar", tag: "Original · Qawwali", note: "Local recording", audioSrc: mereRashkeQamar },
-  { id: "sanson-ki-mala-original", title: "Sanson Ki Mala Pe", tag: "Original · Qawwali", note: "Local recording", audioSrc: sansonKiMala },
+  { id: "sochta-hoon-original", title: "Sochta Hoon Ke Woh Kitne Masoom Thay", tag: "Original", note: "", audioSrc: sochtaHoon },
+  { id: "tumhein-dillagi-original", title: "Tumhein Dillagi Bhool Jaani Padegi", tag: "Original", note: "", audioSrc: tumheinDillagi },
+  { id: "kali-kali-original", title: "Kali Kali Zulfon Ke Phande Na Dalo", tag: "Original", note: "", audioSrc: kaliKali },
+  { id: "mere-rashke-qamar-original", title: "Mere Rashke-e-Qamar", tag: "Original", note: "", audioSrc: mereRashkeQamar },
+  { id: "sanson-ki-mala-original", title: "Sanson Ki Mala Pe", tag: "Original", note: "", audioSrc: sansonKiMala },
+  { id: "mast-nazroon-se-allah-bachhae", title: "Mast Nazroon se Allah Bachhae", tag: "Original", note: "", audioSrc: mastNazroon },
+  { id: "kinna-soona-tainu", title: "Kinna Soona Tainu", tag: "Original", note: "", audioSrc: kinnaSona },
+  { id: "sanu-ik-pal-chain-na-aawe", title: "Sanu Ik Pal Chain Na Aawe", tag: "Original", note: "", audioSrc: sanuEkpal },
+  { id: "dil-pe-zakham-khaate-hain", title: "Dil Pe Zakham Khaate Hain", tag: "Original", note: "", audioSrc: dilPeZakham },
+  { id: "unke-andaz-e-karam", title: "Unke Andaz e Karam", tag: "Original", note: "", audioSrc: unkeAndaz },
   /*
   { id: "o7fArxQHR-8", title: "Allah Hoo Allah Hoo", ur: "اللہ ہو اللہ ہو", tag: "Zikr · Sama", note: "Live, OSA Worldwide" },
   { id: "eYSaHXXFIBU", title: "Sanson Ki Mala Pe", ur: "سانسوں کی مالا پہ", tag: "Bhakti · Sama", note: "1982" },
@@ -37,6 +46,11 @@ export const ROTATIONS = [
       "kali-kali-original",
       "mere-rashke-qamar-original",
       "sanson-ki-mala-original",
+      "mast-nazroon-se-allah-bachhae",
+      "kinna-soona-tainu",
+      "sanu-ik-pal-chain-na-aawe",
+      "dil-pe-zakham-khaate-hain",
+      "unke-andaz-e-karam",
     ],
   },
   /*
