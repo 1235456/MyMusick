@@ -105,7 +105,7 @@ export default function Hero({ currentSong, isPlaying, hasStarted, iframeSrc, au
             <div className="mr-upi-qr">
               <QRCodeSVG value={upiUrl} size={190} bgColor="#f4e9d3" fgColor="#1c130f" level="M" title={`UPI payment for ${upiId}`} />
             </div>
-            <strong className="mr-upi-id">{upiId}</strong>
+            {/* <strong className="mr-upi-id">{upiId}</strong> */}
             <a className="mr-support-open" href={upiUrl}>Open UPI app</a>
           </div>
         </div>
