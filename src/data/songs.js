@@ -1,15 +1,15 @@
 
 
 export const SONGS = [
-  { id: "aavan-jaavan", title: "Aavan Jaavan", tag: "War 2", note: "Arijit Singh, Nikhita Gandhi · 30 sec preview", audioSrc: "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/95/59/1f/95591f7e-4121-963c-891c-18025f811f22/mzaf_2089489847054162062.plus.aac.p.m4a" },
-  { id: "tum-hi-ho", title: "Tum Hi Ho", tag: "Aashiqui 2", note: "Arijit Singh · 30 sec preview", audioSrc: "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/38/d/b9/38deb942-d44a-f2bb-205c-ddf05be84693/mzaf_9747647124859107103.plus.aac.p.m4a" },
-  { id: "channa-mereya", title: "Channa Mereya", tag: "Ae Dil Hai Mushkil", note: "Arijit Singh · 30 sec preview", audioSrc: "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d5/f9/98/d5f998a7-0090-ee2d-03f8-557ad6c5bf65/mzaf_14251357991592637728.plus.aac.p.m4a" },
-  { id: "agar-tum-saath-ho", title: "Agar Tum Saath Ho", tag: "Tamasha", note: "Arijit Singh, Alka Yagnik · 30 sec preview", audioSrc: "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/b1/ef/60/b1ef60e4-edb1-9c6c-831c-63156a648460/mzaf_1954453039481622269.plus.aac.p.m4a" },
-  { id: "kesariya", title: "Kesariya", tag: "Brahmastra", note: "Arijit Singh · 30 sec preview", audioSrc: "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/38/4c/5c/384c5c8f-3ff8-e457-b2f7-3158ce108649/mzaf_12389299033886433185.plus.aac.p.m4a" },
-  { id: "phir-bhi-tumko-chaahunga", title: "Phir Bhi Tumko Chaahunga", tag: "Half Girlfriend", note: "Arijit Singh · 30 sec preview", audioSrc: "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/71/c1/85/71c18529-2c27-f0d1-3b23-f5b5b70bc93f/mzaf_8603372778770751468.plus.aac.p.m4a" },
-  { id: "hawayein", title: "Hawayein", tag: "Jab Harry Met Sejal", note: "Arijit Singh · 30 sec preview", audioSrc: "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/15/d1/a8/15d1a862-edcd-6a92-624a-2bbf0f7eff26/mzaf_7165241817401822857.plus.aac.p.m4a" },
-  { id: "shayad", title: "Shayad", tag: "Love Aaj Kal", note: "Arijit Singh · 30 sec preview", audioSrc: "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/69/08/d6/6908d60e-563f-5d07-9bb5-737c9d90b59d/mzaf_9263362903198979589.plus.aac.p.m4a" },
-  { id: "tera-yaar-hoon-main", title: "Tera Yaar Hoon Main", tag: "Sonu Ke Titu Ki Sweety", note: "Arijit Singh · 30 sec preview", audioSrc: "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/44/26/50/442650b7-256e-034a-380a-4bbf16e59e53/mzaf_272051127111758324.plus.aac.p.m4a" },
+  { id: "iNryWZ5hxm8", title: "Aavan Jaavan", tag: "War 2", note: "Arijit Singh, Nikhita Gandhi" },
+  { id: "Umqb9KENgmk", title: "Tum Hi Ho", tag: "Aashiqui 2", note: "Arijit Singh" },
+  { id: "284Ov7ysmfA", title: "Channa Mereya", tag: "Ae Dil Hai Mushkil", note: "Arijit Singh" },
+  { id: "sK7riqg2mr4", title: "Agar Tum Saath Ho", tag: "Tamasha", note: "Arijit Singh, Alka Yagnik" },
+  { id: "BddP6PYo2gs", title: "Kesariya", tag: "Brahmastra", note: "Arijit Singh" },
+  { id: "Grr0FlC8SQA", title: "Phir Bhi Tumko Chaahunga", tag: "Half Girlfriend", note: "Arijit Singh" },
+  { id: "V8lJw8jJ4lA", title: "Hawayein", tag: "Jab Harry Met Sejal", note: "Arijit Singh" },
+  { id: "PqFMFVcCZgI", title: "Shayad", tag: "Love Aaj Kal", note: "Arijit Singh" },
+  { id: "eK0IIyBlYew", title: "Tera Yaar Hoon Main", tag: "Sonu Ke Titu Ki Sweety", note: "Arijit Singh" },
   /*
   { id: "o7fArxQHR-8", title: "Allah Hoo Allah Hoo", ur: "اللہ ہو اللہ ہو", tag: "Zikr · Sama", note: "Live, OSA Worldwide" },
   { id: "eYSaHXXFIBU", title: "Sanson Ki Mala Pe", ur: "سانسوں کی مالا پہ", tag: "Bhakti · Sama", note: "1982" },
@@ -28,8 +28,8 @@ export const ROTATIONS = [
     name: "Arijit After Dark",
     desc: "A late-night rotation of Arijit's most loved film songs.",
     ids: [
-      "aavan-jaavan", "tum-hi-ho", "channa-mereya", "agar-tum-saath-ho", "kesariya",
-      "phir-bhi-tumko-chaahunga", "hawayein", "shayad", "tera-yaar-hoon-main",
+      "iNryWZ5hxm8", "Umqb9KENgmk", "284Ov7ysmfA", "sK7riqg2mr4", "BddP6PYo2gs",
+      "Grr0FlC8SQA", "V8lJw8jJ4lA", "PqFMFVcCZgI", "eK0IIyBlYew",
     ],
   },
   /*
