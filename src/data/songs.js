@@ -1,6 +1,7 @@
 
 
 export const SONGS = [
+  { id: "iNryWZ5hxm8", title: "Aavan Jaavan", tag: "War 2", note: "Arijit Singh, Nikhita Gandhi" },
   { id: "Umqb9KENgmk", title: "Tum Hi Ho", tag: "Aashiqui 2", note: "Arijit Singh" },
   { id: "284Ov7ysmfA", title: "Channa Mereya", tag: "Ae Dil Hai Mushkil", note: "Arijit Singh" },
   { id: "sK7riqg2mr4", title: "Agar Tum Saath Ho", tag: "Tamasha", note: "Arijit Singh, Alka Yagnik" },
@@ -27,7 +28,7 @@ export const ROTATIONS = [
     name: "Arijit After Dark",
     desc: "A late-night rotation of Arijit's most loved film songs.",
     ids: [
-      "Umqb9KENgmk", "284Ov7ysmfA", "sK7riqg2mr4", "BddP6PYo2gs",
+      "iNryWZ5hxm8", "Umqb9KENgmk", "284Ov7ysmfA", "sK7riqg2mr4", "BddP6PYo2gs",
       "Grr0FlC8SQA", "V8lJw8jJ4lA", "PqFMFVcCZgI", "eK0IIyBlYew",
     ],
   },
