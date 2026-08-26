@@ -8,7 +8,7 @@ function formatTime(seconds) {
 }
 
 export default function NowPlaying({ currentSong, isPlaying, hasStarted, onToggle, playbackTime, onSeek }) {
-  const statusLabel = !hasStarted ? "Tap play to enter the mehfil" : isPlaying ? "Now playing" : "Paused";
+  const statusLabel = !hasStarted ? "Tap play to start the vibe" : isPlaying ? "Now playing" : "Paused";
 
   return (
     <div className="mr-nowplaying">

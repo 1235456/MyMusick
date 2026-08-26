@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { QRCodeSVG } from "qrcode.react";
 import NowPlaying from "./NowPlaying";
 import YouTubePlayer from "./YouTubePlayer";
-import { BG_IMAGE } from "../assets/streetScene";
 
 export default function Hero({ currentSong, isPlaying, hasStarted, iframeSrc, audioSrc, listeners, onToggle, onPrevious, onNext }) {
   const [playbackTime, setPlaybackTime] = useState({ current: 0, duration: 0 });
@@ -10,7 +9,7 @@ export default function Hero({ currentSong, isPlaying, hasStarted, iframeSrc, au
   const [supportOpen, setSupportOpen] = useState(false);
   const currentTime = new Intl.DateTimeFormat("en-US", { hour: "numeric", minute: "2-digit" }).format(new Date());
   const upiId = "raghavendrapani36@oksbi";
-  const upiUrl = `upi://pay?pa=${encodeURIComponent(upiId)}&pn=Nusrat%20Fateh%20Ali%20Khan%20Mehfil&cu=INR`;
+  const upiUrl = `upi://pay?pa=${encodeURIComponent(upiId)}&pn=Masti%20Music&cu=INR`;
 
   useEffect(() => {
     setPlaybackTime({ current: 0, duration: 0 });
@@ -25,16 +24,16 @@ export default function Hero({ currentSong, isPlaying, hasStarted, iframeSrc, au
 
   return (
     <section className="mr-hero">
-      <div className="mr-hero-bg" style={{ backgroundImage: `url(${BG_IMAGE})` }} />
+      <div className="mr-hero-bg" style={{ backgroundImage: "url('/masti-neon-night.svg')" }} />
       <div className="mr-hero-overlay" />
 
       {/*
       <StatusBar listeners={listeners} />
       <div className="mr-hero-content">
-        <p className="mr-eyebrow" style={{ marginBottom: 6 }}>Nusrat Fateh Ali Khan Mehfil · open every night</p>
-        <h1 className="mr-display">Nusrat Fateh Ali Khan Mehfil</h1>
-        <div className="mr-urdu mr-hero-ur">محفل ریڈیو — ہر رات جاری</div>
-        <p className="mr-hero-tag">Nusrat Fateh Ali Khan's qawwaliyan, kept playing the way they used to unfold in a packed mehfil.</p>
+        <p className="mr-eyebrow" style={{ marginBottom: 6 }}>Masti Music · open every night</p>
+        <h1 className="mr-display">Masti Music</h1>
+        <div className="mr-urdu mr-hero-ur">मस्ती म्यूजिक — हर रात जारी</div>
+        <p className="mr-hero-tag">Arijit Singh's most-loved songs, kept playing for every mood and every kind of night.</p>
         <NowPlaying currentSong={currentSong} isPlaying={isPlaying} hasStarted={hasStarted} onToggle={onToggle} playbackTime={playbackTime} onSeek={handleSeek} />
         <div className="mr-hero-links"><a className="mr-pill" href="#rotations">Rotations</a><a className="mr-pill" href="#songs">All songs</a></div>
       </div>
@@ -52,7 +51,7 @@ export default function Hero({ currentSong, isPlaying, hasStarted, iframeSrc, au
             <button
               type="button"
               className="mr-support-link"
-              aria-label="Support Nusrat Fateh Ali Khan Mehfil with a UPI payment"
+              aria-label="Support Masti Music with a UPI payment"
               onClick={() => setSupportOpen(true)}
             >
               Support
@@ -63,8 +62,8 @@ export default function Hero({ currentSong, isPlaying, hasStarted, iframeSrc, au
       </div>
 
       <div className="mr-reference-brand">
-        <h1 className="mr-reference-title mr-display">Nusrat Fateh Ali Khan Mehfil</h1>
-        <p>Nusrat Fateh Ali Khan Mehfil · open every night</p>
+        <h1 className="mr-reference-title mr-display">Masti Music</h1>
+        <p>Arijit Singh · songs for every kind of night</p>
       </div>
 
       <div className="mr-reference-player">
@@ -77,13 +76,13 @@ export default function Hero({ currentSong, isPlaying, hasStarted, iframeSrc, au
       </div>
 
       <div className="mr-reference-bottom">
-        <span>NUSRAT FATEH ALI KHAN MEHFIL</span>
-        <span>OPEN ALL NIGHT</span>
+        <span>MASTI MUSIC</span>
+        <span>ARJIT SINGH RADIO</span>
       </div>
 
       {/* The player remains hidden visually while YouTube supplies the audio stream. */}
       <div className="mr-reference-hidden-copy">
-        <p>Nusrat Fateh Ali Khan's qawwaliyan, kept playing round the clock.</p>
+        <p>Arijit Singh songs, kept playing round the clock.</p>
       </div>
 
       <YouTubePlayer
@@ -99,9 +98,9 @@ export default function Hero({ currentSong, isPlaying, hasStarted, iframeSrc, au
         <div className="mr-support-backdrop" role="presentation" onClick={() => setSupportOpen(false)}>
           <div className="mr-support-dialog" role="dialog" aria-modal="true" aria-labelledby="support-title" onClick={(event) => event.stopPropagation()}>
             <button className="mr-support-close" type="button" aria-label="Close support dialog" onClick={() => setSupportOpen(false)}>×</button>
-            <p className="mr-eyebrow">Support the mehfil</p>
+            <p className="mr-eyebrow">Support Masti Music</p>
             <h2 id="support-title" className="mr-display">Send a contribution</h2>
-            <p>Scan this QR code with any UPI app to support the mehfil:</p>
+            <p>Scan this QR code with any UPI app to support the music:</p>
             <div className="mr-upi-qr">
               <QRCodeSVG value={upiUrl} size={190} bgColor="#f4e9d3" fgColor="#1c130f" level="M" title={`UPI payment for ${upiId}`} />
             </div>

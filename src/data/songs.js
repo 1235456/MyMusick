@@ -1,28 +1,14 @@
 
 
-import sochtaHoon from "../assets/Sochta-Hoon-Ke-Woh-Kitne-Masoom-Thay.mp3";
-import tumheinDillagi from "../assets/Tumhein Dillagi Bhool Jaani Padegi.mp3";
-import kaliKali from "../assets/Kali-Kali-Zulfon-Ke-Phande-Nah-Dalo.mp3";
-import mereRashkeQamar from "../assets/Mere-Rashke-e-Qamar.mp3";
-import sansonKiMala from "../assets/Sanson-Ki-Mala-Pey.mp3";
-import mastNazroon from "../assets/Mast-Nazroon-se-Allah-Bachhae.mp3";
-import kinnaSona from "../assets/Kinna-Sohna-Tainu.mp3";
-import sanuEkpal from "../assets/Sanu-Ik-Pal-Chain-Na-Aawe.mp3";
-import dilPeZakham from "../assets/Dil-Pe-Zakham-Khaate-Hain.mp3";
-import unkeAndaz from "../assets/Unke Andaz e Karam.mp3";
-
-
 export const SONGS = [
-  { id: "sochta-hoon-original", title: "Sochta Hoon Ke Woh Kitne Masoom Thay", tag: "Original", note: "", audioSrc: sochtaHoon },
-  { id: "tumhein-dillagi-original", title: "Tumhein Dillagi Bhool Jaani Padegi", tag: "Original", note: "", audioSrc: tumheinDillagi },
-  { id: "kali-kali-original", title: "Kali Kali Zulfon Ke Phande Na Dalo", tag: "Original", note: "", audioSrc: kaliKali },
-  { id: "mere-rashke-qamar-original", title: "Mere Rashke-e-Qamar", tag: "Original", note: "", audioSrc: mereRashkeQamar },
-  { id: "sanson-ki-mala-original", title: "Sanson Ki Mala Pe", tag: "Original", note: "", audioSrc: sansonKiMala },
-  { id: "mast-nazroon-se-allah-bachhae", title: "Mast Nazroon se Allah Bachhae", tag: "Original", note: "", audioSrc: mastNazroon },
-  { id: "kinna-soona-tainu", title: "Kinna Soona Tainu", tag: "Original", note: "", audioSrc: kinnaSona },
-  { id: "sanu-ik-pal-chain-na-aawe", title: "Sanu Ik Pal Chain Na Aawe", tag: "Original", note: "", audioSrc: sanuEkpal },
-  { id: "dil-pe-zakham-khaate-hain", title: "Dil Pe Zakham Khaate Hain", tag: "Original", note: "", audioSrc: dilPeZakham },
-  { id: "unke-andaz-e-karam", title: "Unke Andaz e Karam", tag: "Original", note: "", audioSrc: unkeAndaz },
+  { id: "Umqb9KENgmk", title: "Tum Hi Ho", tag: "Aashiqui 2", note: "Arijit Singh" },
+  { id: "284Ov7ysmfA", title: "Channa Mereya", tag: "Ae Dil Hai Mushkil", note: "Arijit Singh" },
+  { id: "sK7riqg2mr4", title: "Agar Tum Saath Ho", tag: "Tamasha", note: "Arijit Singh, Alka Yagnik" },
+  { id: "BddP6PYo2gs", title: "Kesariya", tag: "Brahmastra", note: "Arijit Singh" },
+  { id: "Grr0FlC8SQA", title: "Phir Bhi Tumko Chaahunga", tag: "Half Girlfriend", note: "Arijit Singh" },
+  { id: "V8lJw8jJ4lA", title: "Hawayein", tag: "Jab Harry Met Sejal", note: "Arijit Singh" },
+  { id: "PqFMFVcCZgI", title: "Shayad", tag: "Love Aaj Kal", note: "Arijit Singh" },
+  { id: "eK0IIyBlYew", title: "Tera Yaar Hoon Main", tag: "Sonu Ke Titu Ki Sweety", note: "Arijit Singh" },
   /*
   { id: "o7fArxQHR-8", title: "Allah Hoo Allah Hoo", ur: "اللہ ہو اللہ ہو", tag: "Zikr · Sama", note: "Live, OSA Worldwide" },
   { id: "eYSaHXXFIBU", title: "Sanson Ki Mala Pe", ur: "سانسوں کی مالا پہ", tag: "Bhakti · Sama", note: "1982" },
@@ -38,19 +24,11 @@ export const SONGS = [
 
 export const ROTATIONS = [
   {
-    name: "Original Recordings",
-    desc: "Your local recordings, played directly from the app without YouTube.",
+    name: "Arijit After Dark",
+    desc: "A late-night rotation of Arijit's most loved film songs.",
     ids: [
-      "sochta-hoon-original",
-      "tumhein-dillagi-original",
-      "kali-kali-original",
-      "mere-rashke-qamar-original",
-      "sanson-ki-mala-original",
-      "mast-nazroon-se-allah-bachhae",
-      "kinna-soona-tainu",
-      "sanu-ik-pal-chain-na-aawe",
-      "dil-pe-zakham-khaate-hain",
-      "unke-andaz-e-karam",
+      "Umqb9KENgmk", "284Ov7ysmfA", "sK7riqg2mr4", "BddP6PYo2gs",
+      "Grr0FlC8SQA", "V8lJw8jJ4lA", "PqFMFVcCZgI", "eK0IIyBlYew",
     ],
   },
   /*

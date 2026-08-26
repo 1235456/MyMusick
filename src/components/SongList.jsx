@@ -10,10 +10,10 @@ export default function SongList({ currentId, isPlaying, onPlaySong }) {
     <section id="songs" className="mr-section">
       <div className="mr-section-head">
         <div>
-          <p className="mr-eyebrow">All Qawwaliyan</p>
-          <h2 className="mr-display">Everything in the mehfil</h2>
+          <p className="mr-eyebrow">The Masti playlist</p>
+          <h2 className="mr-display">Arijit Singh, on repeat</h2>
         </div>
-        <span className="hint">{SONGS.length} local tracks</span>
+        <span className="hint">{SONGS.length} songs to feel</span>
       </div>
 
       <div className="mr-songs">

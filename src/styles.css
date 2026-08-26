@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Rakkas&family=Noto+Nastaliq+Urdu:wght@600&family=Mukta:wght@400;500;600;700&display=swap');
 
 :root {
-  --ink: #1c130f;
-  --panel: rgba(28, 19, 15, 0.72);
-  --terracotta: #bf6b49;
-  --cream: #ecdfc4;
-  --maroon: #4f2b2d;
-  --teal-dark: #182620;
-  --gold: #dea75c;
-  --parchment: #f4e9d3;
-  --parchment-dim: #cdbba0;
-  --line: rgba(244, 233, 211, 0.16);
+  --ink: #172b4d;
+  --panel: rgba(23, 43, 77, 0.78);
+  --terracotta: #ff6b5f;
+  --cream: #fff4df;
+  --maroon: #7b2d45;
+  --teal-dark: #123f4a;
+  --gold: #ffd166;
+  --parchment: #fffaf0;
+  --parchment-dim: #c9d4e5;
+  --line: rgba(255, 250, 240, 0.2);
   --radius: 14px;
 }
 
@@ -23,7 +23,7 @@ body {
   font-family: 'Mukta', system-ui, sans-serif;
 }
 
-.mr-app { min-height: 100vh; padding-bottom: 96px; background: var(--ink); color: var(--parchment); }
+.mr-app { min-height: 100vh; padding-bottom: 96px; background: radial-gradient(circle at 82% 6%, #28527f 0, transparent 32%), var(--ink); color: var(--parchment); }
 .mr-urdu { font-family: 'Noto Nastaliq Urdu', serif; direction: rtl; unicode-bidi: isolate; }
 .mr-display { font-family: 'Rakkas', serif; }
 .mr-eyebrow { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin: 0; }
@@ -63,7 +63,7 @@ body {
 /* hero */
 .mr-hero { position: relative; min-height: min(760px, 100vh); overflow: hidden; background: var(--ink); }
 .mr-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; }
-.mr-hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(18, 12, 9, .34) 0%, rgba(18, 12, 9, .08) 38%, rgba(18, 12, 9, .68) 100%); }
+.mr-hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(14, 17, 48, .12) 0%, rgba(14, 17, 48, .08) 38%, rgba(7, 19, 43, .78) 100%); }
 .mr-reference-top { position: relative; z-index: 3; display: flex; justify-content: space-between; align-items: flex-start; padding: 24px 5vw; gap: 24px; }
 .mr-reference-status { display: flex; flex-direction: column; gap: 10px; color: var(--parchment); font-size: 13px; text-shadow: 0 2px 12px rgba(0, 0, 0, .65); }
 .mr-reference-time { font-size: 18px; letter-spacing: .12em; font-weight: 600; }

@@ -35,7 +35,7 @@ export default function YouTubePlayer({ src, audioSrc, isPlaying, hasStarted, se
 
   return (
     <iframe
-      title="Mehfil Radio player"
+      title="Masti Music player"
       src={src}
       allow="autoplay; encrypted-media"
       referrerPolicy="strict-origin-when-cross-origin"

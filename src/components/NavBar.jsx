@@ -2,13 +2,13 @@ export default function NavBar() {
   return (
     <header className="mr-nav">
       <div className="mr-wordmark">
-        <span className="mr-display en">Mehfil Radio</span>
-        <span className="mr-urdu ur">محفل ریڈیو</span>
+        <span className="mr-display en">Masti Music</span>
+        <span className="mr-urdu ur">मस्ती म्यूजिक</span>
       </div>
 
       <nav className="mr-nav-links">
-        <a href="#rotations">Rotations</a>
-        <a href="#songs">All Qawwaliyan</a>
+        <a href="#rotations">Moods</a>
+        <a href="#songs">All songs</a>
       </nav>
 
       <div className="mr-nav-listen">
