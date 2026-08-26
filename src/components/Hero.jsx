@@ -98,6 +98,7 @@ export default function Hero({ currentSong, isPlaying, hasStarted, iframeSrc, au
         onToggle={onToggle}
         onPrevious={onPrevious}
         onNext={onNext}
+        onEnded={onNext}
         onTimeUpdate={(current, duration) => setPlaybackTime({ current, duration })}
       />
 

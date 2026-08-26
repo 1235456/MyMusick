@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-export default function YouTubePlayer({ src, audioSrc, currentSong, isPlaying, hasStarted, seekTo, onToggle, onPrevious, onNext, onTimeUpdate }) {
+export default function YouTubePlayer({ src, audioSrc, currentSong, isPlaying, hasStarted, seekTo, onToggle, onPrevious, onNext, onEnded, onTimeUpdate }) {
   const audioRef = useRef(null);
   const iframeRef = useRef(null);
   const playerRef = useRef(null);
@@ -119,6 +119,23 @@ export default function YouTubePlayer({ src, audioSrc, currentSong, isPlaying, h
   }, [isPlaying]);
 
   useEffect(() => {
+    if (!hasStarted) return;
+
+    function resumeAfterLock() {
+      if (!isPlaying) return;
+      audioRef.current?.play?.().catch(() => {});
+      playerRef.current?.playVideo?.();
+    }
+
+    document.addEventListener("visibilitychange", resumeAfterLock);
+    window.addEventListener("pageshow", resumeAfterLock);
+    return () => {
+      document.removeEventListener("visibilitychange", resumeAfterLock);
+      window.removeEventListener("pageshow", resumeAfterLock);
+    };
+  }, [hasStarted, isPlaying]);
+
+  useEffect(() => {
     if (!audioRef.current || !audioSrc || !hasStarted) return;
     if (isPlaying) {
       audioRef.current.play().catch(() => {});
@@ -149,6 +166,7 @@ export default function YouTubePlayer({ src, audioSrc, currentSong, isPlaying, h
         className="mr-yt-hidden"
         onLoadedMetadata={(event) => onTimeUpdate(0, event.currentTarget.duration)}
         onTimeUpdate={(event) => onTimeUpdate(event.currentTarget.currentTime, event.currentTarget.duration)}
+        onEnded={onEnded}
       />
     );
   }
@@ -160,6 +178,7 @@ export default function YouTubePlayer({ src, audioSrc, currentSong, isPlaying, h
       src={src}
       allow="autoplay; encrypted-media; picture-in-picture"
       referrerPolicy="strict-origin-when-cross-origin"
+      loading="eager"
       className="mr-yt-hidden"
     />
   );
