@@ -10,7 +10,7 @@ export default function Footer() {
       <a href="mailto:private4220@gmail.com">private4220@gmail.com</a>.
       <br />
       <br />
-      © 2026 Masti Music
+      © 2026 Arijit Diaries
     </footer>
   );
 }

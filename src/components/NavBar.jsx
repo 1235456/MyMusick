@@ -2,7 +2,7 @@ export default function NavBar() {
   return (
     <header className="mr-nav">
       <div className="mr-wordmark">
-        <span className="mr-display en">Masti Music</span>
+        <span className="mr-display en">Arijit Diaries</span>
         <span className="mr-urdu ur">मस्ती म्यूजिक</span>
       </div>
 
