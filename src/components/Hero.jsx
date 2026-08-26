@@ -7,9 +7,12 @@ export default function Hero({ currentSong, isPlaying, hasStarted, iframeSrc, au
   const [playbackTime, setPlaybackTime] = useState({ current: 0, duration: 0 });
   const [seekTo, setSeekTo] = useState(null);
   const [supportOpen, setSupportOpen] = useState(false);
+  const [contributionAmount, setContributionAmount] = useState("50");
+  const [amountError, setAmountError] = useState("");
   const currentTime = new Intl.DateTimeFormat("en-US", { hour: "numeric", minute: "2-digit" }).format(new Date());
-  const upiId = "raghavendrapani36@oksbi";
-  const upiUrl = `upi://pay?pa=${encodeURIComponent(upiId)}&pn=Masti%20Music&cu=INR`;
+  const upiId = "8810637435@ptsbi";
+  const paymentAmount = Math.max(50, Number(contributionAmount) || 50);
+  const upiUrl = `upi://pay?pa=${encodeURIComponent(upiId)}&pn=Masti%20Music&am=${paymentAmount}&cu=INR`;
 
   useEffect(() => {
     setPlaybackTime({ current: 0, duration: 0 });
@@ -101,6 +104,30 @@ export default function Hero({ currentSong, isPlaying, hasStarted, iframeSrc, au
             <p className="mr-eyebrow">Support Masti Music</p>
             <h2 id="support-title" className="mr-display">Send a contribution</h2>
             <p>Scan this QR code with any UPI app to support the music:</p>
+            <label className="mr-amount-label" htmlFor="contribution-amount">Contribution amount (minimum ₹50)</label>
+            <div className="mr-amount-input">
+              <span aria-hidden="true">₹</span>
+              <input
+                id="contribution-amount"
+                type="number"
+                min="50"
+                step="10"
+                value={contributionAmount}
+                onChange={(event) => {
+                  setContributionAmount(event.target.value);
+                  setAmountError("");
+                }}
+                onBlur={() => {
+                  const enteredAmount = Number(contributionAmount);
+                  if (contributionAmount && enteredAmount < 50) {
+                    setAmountError("Minimum payment is ₹50. Please enter ₹50 or more.");
+                    return;
+                  }
+                  setContributionAmount(String(paymentAmount));
+                }}
+              />
+            </div>
+            {amountError && <p className="mr-amount-error" role="alert">{amountError}</p>}
             <div className="mr-upi-qr">
               <QRCodeSVG value={upiUrl} size={190} bgColor="#f4e9d3" fgColor="#1c130f" level="M" title={`UPI payment for ${upiId}`} />
             </div>
