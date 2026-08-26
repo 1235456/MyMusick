@@ -91,9 +91,13 @@ export default function Hero({ currentSong, isPlaying, hasStarted, iframeSrc, au
       <YouTubePlayer
         src={iframeSrc}
         audioSrc={audioSrc}
+        currentSong={currentSong}
         isPlaying={isPlaying}
         hasStarted={hasStarted}
         seekTo={seekTo}
+        onToggle={onToggle}
+        onPrevious={onPrevious}
+        onNext={onNext}
         onTimeUpdate={(current, duration) => setPlaybackTime({ current, duration })}
       />
 

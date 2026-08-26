@@ -1,16 +1,53 @@
 import { useEffect, useRef } from "react";
 
-export default function YouTubePlayer({ src, audioSrc, isPlaying, hasStarted, seekTo, onTimeUpdate }) {
+export default function YouTubePlayer({ src, audioSrc, currentSong, isPlaying, hasStarted, seekTo, onToggle, onPrevious, onNext, onTimeUpdate }) {
   const audioRef = useRef(null);
   const iframeRef = useRef(null);
   const playerRef = useRef(null);
   const onTimeUpdateRef = useRef(onTimeUpdate);
   const isPlayingRef = useRef(isPlaying);
+  const mediaActionsRef = useRef({ onToggle, onPrevious, onNext });
 
   useEffect(() => {
     onTimeUpdateRef.current = onTimeUpdate;
     isPlayingRef.current = isPlaying;
-  }, [isPlaying, onTimeUpdate]);
+    mediaActionsRef.current = { onToggle, onPrevious, onNext };
+  }, [isPlaying, onNext, onPrevious, onTimeUpdate, onToggle]);
+
+  useEffect(() => {
+    if (!navigator.mediaSession || !currentSong) return;
+
+    navigator.mediaSession.metadata = new MediaMetadata({
+      title: currentSong.title,
+      artist: currentSong.note || "Arijit Singh",
+      album: `Masti Music · ${currentSong.tag}`,
+    });
+    navigator.mediaSession.playbackState = isPlaying ? "playing" : "paused";
+
+    const actions = [
+      ["play", () => mediaActionsRef.current.onToggle()],
+      ["pause", () => mediaActionsRef.current.onToggle()],
+      ["previoustrack", () => mediaActionsRef.current.onPrevious()],
+      ["nexttrack", () => mediaActionsRef.current.onNext()],
+    ];
+    actions.forEach(([action, handler]) => {
+      try {
+        navigator.mediaSession.setActionHandler(action, handler);
+      } catch {
+        // Media Session actions vary across browsers.
+      }
+    });
+
+    return () => {
+      actions.forEach(([action]) => {
+        try {
+          navigator.mediaSession.setActionHandler(action, null);
+        } catch {
+          // Ignore unsupported actions during cleanup.
+        }
+      });
+    };
+  }, [currentSong, isPlaying]);
 
   useEffect(() => {
     if (!hasStarted || audioSrc || !iframeRef.current) return;
@@ -35,7 +72,12 @@ export default function YouTubePlayer({ src, audioSrc, isPlaying, hasStarted, se
       intervalId = window.setInterval(() => {
         const player = playerRef.current;
         if (player?.getCurrentTime && player.getDuration) {
-          onTimeUpdateRef.current(player.getCurrentTime(), player.getDuration());
+          const currentTime = player.getCurrentTime();
+          const duration = player.getDuration();
+          onTimeUpdateRef.current(currentTime, duration);
+          if (navigator.mediaSession?.setPositionState && duration > 0 && currentTime <= duration) {
+            navigator.mediaSession.setPositionState({ duration, playbackRate: 1, position: currentTime });
+          }
         }
       }, 250);
     }
@@ -116,7 +158,7 @@ export default function YouTubePlayer({ src, audioSrc, isPlaying, hasStarted, se
       ref={iframeRef}
       title="Masti Music player"
       src={src}
-      allow="autoplay; encrypted-media"
+      allow="autoplay; encrypted-media; picture-in-picture"
       referrerPolicy="strict-origin-when-cross-origin"
       className="mr-yt-hidden"
     />
