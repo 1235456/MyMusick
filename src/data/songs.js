@@ -1,5 +1,13 @@
 
 
+import ambar from "../assets/Ambar _ Parmish Verma _ Wamiqa Gabbi _ Sukhan Verma _ Tabaah In Theatres Now.mp3";
+import changaMadaTime from "../assets/Changa Mada Time (Full Video) _ A Kay _ Latest Punjabi Song 2016 _ Speed Records.mp3";
+import jhumke from "../assets/Jhumke _ Parmish Verma _ Wamiqa Gabbi _ Tabaah In Theatres 18 Oct _ Speed Records.mp3";
+import kawanDiDaar from "../assets/KAWAN DI DAAR (Official Video) _ A Kay _ Latest Punjabi Songs 2026 _ T-Series.mp3";
+import tabaahCollection from "../assets/Tabaah movie all song's _ Parmish Varma _Jhumke, Wakh, Hanju, Haule Haule, Amber, Title Track Tabaah.mp3";
+import tuttiYaari from "../assets/Tutti Yaari (Full Song) A-Kay _ Latest Punjabi Songs _ Speed Records.mp3";
+import wakh from "../assets/Wakh _ Parmish Verma _ Wamiqa Gabbi _ Latest Punjabi Songs 2024 _ Tabaah Releasing 18 Oct.mp3";
+
 export const SONGS = [
   { id: "iNryWZ5hxm8", title: "Aavan Jaavan", tag: "War 2", note: "Arijit Singh, Nikhita Gandhi" },
   { id: "Umqb9KENgmk", title: "Tum Hi Ho", tag: "Aashiqui 2", note: "Arijit Singh" },
@@ -22,6 +30,18 @@ export const SONGS = [
   { id: "D8l3fLJ1Klw", title: "Yeh Jo Halka Halka Suroor Hai", ur: "یہ جو ہلکا ہلکا سرور ہے", tag: "Qawwali · Dhamaal", note: "1980" },
   */
 ];
+
+export const MY_LIST = [
+  { id: "akay-ambar", title: "Ambar", tag: "Local audio", note: "A Kay / Parmish Verma", audioSrc: ambar },
+  { id: "akay-changa-mada-time", title: "Changa Mada Time", tag: "A Kay", note: "Punjabi song · 2016", audioSrc: changaMadaTime },
+  { id: "akay-jhumke", title: "Jhumke", tag: "Tabaah", note: "Parmish Verma", audioSrc: jhumke },
+  { id: "akay-kawan-di-daar", title: "Kawan Di Daar", tag: "A Kay", note: "Punjabi song · 2026", audioSrc: kawanDiDaar },
+  { id: "akay-tabaah-collection", title: "Tabaah Movie Songs", tag: "Tabaah", note: "Full collection", audioSrc: tabaahCollection },
+  { id: "akay-tutti-yaari", title: "Tutti Yaari", tag: "A-Kay", note: "Punjabi song", audioSrc: tuttiYaari },
+  { id: "akay-wakh", title: "Wakh", tag: "Tabaah", note: "Parmish Verma", audioSrc: wakh },
+];
+export const OTHER_SONGS = SONGS;
+export const ALL_SONGS = [...MY_LIST, ...OTHER_SONGS];
 
 export const ROTATIONS = [
   {
@@ -55,5 +75,5 @@ export const ROTATIONS = [
 ];
 
 export function songById(id) {
-  return SONGS.find((s) => s.id === id);
+  return ALL_SONGS.find((s) => s.id === id);
 }

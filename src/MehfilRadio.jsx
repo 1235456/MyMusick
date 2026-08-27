@@ -1,5 +1,4 @@
 import "./styles.css";
-import { SONGS } from "./data/songs";
 import { usePlayer } from "./hooks/usePlayer";
 
 import Hero from "./components/Hero";
@@ -10,8 +9,8 @@ import Footer from "./components/Footer";
 export default function MehfilRadio() {
   const { currentId, currentSong, isPlaying, hasStarted, listeners, iframeSrc, audioSrc, playQueue, togglePlay, previousTrack, nextTrack } = usePlayer();
 
-  function handlePlaySong(index) {
-    playQueue(SONGS.map((s) => s.id), index);
+  function handlePlaySong(songList, index) {
+    playQueue(songList.map((song) => song.id), index);
   }
 
   return (

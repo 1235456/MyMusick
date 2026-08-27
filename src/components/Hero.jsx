@@ -33,8 +33,8 @@ export default function Hero({ currentSong, isPlaying, hasStarted, iframeSrc, au
       {/*
       <StatusBar listeners={listeners} />
       <div className="mr-hero-content">
-        <p className="mr-eyebrow" style={{ marginBottom: 6 }}>Arijit Diaries · open every night</p>
-        <h1 className="mr-display">Arijit Diaries</h1>
+        <p className="mr-eyebrow" style={{ marginBottom: 6 }}>My Playlist · open every night</p>
+        <h1 className="mr-display">My Playlist</h1>
         <div className="mr-urdu mr-hero-ur">मस्ती म्यूजिक — हर रात जारी</div>
         <p className="mr-hero-tag">Arijit Singh's most-loved songs, kept playing for every mood and every kind of night.</p>
         <NowPlaying currentSong={currentSong} isPlaying={isPlaying} hasStarted={hasStarted} onToggle={onToggle} playbackTime={playbackTime} onSeek={handleSeek} />
@@ -54,7 +54,7 @@ export default function Hero({ currentSong, isPlaying, hasStarted, iframeSrc, au
             <button
               type="button"
               className="mr-support-link"
-              aria-label="Support Arijit Diaries with a UPI payment"
+              aria-label="Support My Playlist with a UPI payment"
               onClick={() => setSupportOpen(true)}
             >
               Support
@@ -65,7 +65,7 @@ export default function Hero({ currentSong, isPlaying, hasStarted, iframeSrc, au
       </div>
 
       <div className="mr-reference-brand">
-        <h1 className="mr-reference-title mr-display">Arijit Diaries</h1>
+        <h1 className="mr-reference-title mr-display">My Playlist</h1>
         <p>Arijit Singh · songs for every kind of night</p>
       </div>
 
@@ -79,7 +79,7 @@ export default function Hero({ currentSong, isPlaying, hasStarted, iframeSrc, au
       </div>
 
       <div className="mr-reference-bottom">
-        <span>ARIJIT DIARIES</span>
+        <span>MY PLAYLIST</span>
         <span>ARJIT SINGH RADIO</span>
       </div>
 
@@ -106,7 +106,7 @@ export default function Hero({ currentSong, isPlaying, hasStarted, iframeSrc, au
         <div className="mr-support-backdrop" role="presentation" onClick={() => setSupportOpen(false)}>
           <div className="mr-support-dialog" role="dialog" aria-modal="true" aria-labelledby="support-title" onClick={(event) => event.stopPropagation()}>
             <button className="mr-support-close" type="button" aria-label="Close support dialog" onClick={() => setSupportOpen(false)}>×</button>
-            <p className="mr-eyebrow">Support Arijit Diaries</p>
+            <p className="mr-eyebrow">Support My Playlist</p>
             <h2 id="support-title" className="mr-display">Send a contribution</h2>
             <p>Scan this QR code with any UPI app to support the music:</p>
             <label className="mr-amount-label" htmlFor="contribution-amount">Contribution amount (minimum ₹50)</label>

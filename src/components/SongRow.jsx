@@ -6,7 +6,8 @@ export default function SongRow({ song, index, isActive, isPlaying, onPlay }) {
       className={`mr-song-row${isActive ? " active" : ""}`}
       onClick={() => onPlay(index)}
     >
-      <span className="mr-song-play">
+      <span className="mr-song-index">{String(index + 1).padStart(2, "0")}</span>
+      <span className="mr-song-play" aria-hidden="true">
         {isActive && isPlaying ? <Pause size={13} /> : <Play size={13} style={{ marginLeft: 1 }} />}
       </span>
 
@@ -15,9 +16,8 @@ export default function SongRow({ song, index, isActive, isPlaying, onPlay }) {
       </span>
 
       <span className="mr-song-tags">
-        {song.tag}
-        <br />
-        {song.note}
+        <b>{song.tag}</b>
+        <span>{song.note}</span>
       </span>
     </div>
   );

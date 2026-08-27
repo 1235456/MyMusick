@@ -20,7 +20,7 @@ export default function YouTubePlayer({ src, audioSrc, currentSong, isPlaying, h
     navigator.mediaSession.metadata = new MediaMetadata({
       title: currentSong.title,
       artist: currentSong.note || "Arijit Singh",
-      album: `Arijit Diaries · ${currentSong.tag}`,
+      album: `My Playlist · ${currentSong.tag}`,
     });
     navigator.mediaSession.playbackState = isPlaying ? "playing" : "paused";
 
@@ -174,7 +174,7 @@ export default function YouTubePlayer({ src, audioSrc, currentSong, isPlaying, h
   return (
     <iframe
       ref={iframeRef}
-      title="Arijit Diaries player"
+      title="My Playlist player"
       src={src}
       allow="autoplay; encrypted-media; picture-in-picture"
       referrerPolicy="strict-origin-when-cross-origin"
