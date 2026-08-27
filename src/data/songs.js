@@ -1,12 +1,12 @@
 
 
-import ambar from "../assets/Ambar _ Parmish Verma _ Wamiqa Gabbi _ Sukhan Verma _ Tabaah In Theatres Now.mp3";
-import changaMadaTime from "../assets/Changa Mada Time (Full Video) _ A Kay _ Latest Punjabi Song 2016 _ Speed Records.mp3";
-import jhumke from "../assets/Jhumke _ Parmish Verma _ Wamiqa Gabbi _ Tabaah In Theatres 18 Oct _ Speed Records.mp3";
-import kawanDiDaar from "../assets/KAWAN DI DAAR (Official Video) _ A Kay _ Latest Punjabi Songs 2026 _ T-Series.mp3";
-import tabaahCollection from "../assets/Tabaah movie all song's _ Parmish Varma _Jhumke, Wakh, Hanju, Haule Haule, Amber, Title Track Tabaah.mp3";
-import tuttiYaari from "../assets/Tutti Yaari (Full Song) A-Kay _ Latest Punjabi Songs _ Speed Records.mp3";
-import wakh from "../assets/Wakh _ Parmish Verma _ Wamiqa Gabbi _ Latest Punjabi Songs 2024 _ Tabaah Releasing 18 Oct.mp3";
+import ambar from "../assets/ambar.mp3";
+import changaMadaTime from "../assets/changa-mada-time.mp3";
+import jhumke from "../assets/jhumke.mp3";
+import kawanDiDaar from "../assets/kawan-di-daar.mp3";
+import tabaahCollection from "../assets/tabaah-movie-songs.mp3";
+import tuttiYaari from "../assets/tutti-yaari.mp3";
+import wakh from "../assets/wakh.mp3";
 
 export const SONGS = [
   { id: "iNryWZ5hxm8", title: "Aavan Jaavan", tag: "War 2", note: "Arijit Singh, Nikhita Gandhi" },
