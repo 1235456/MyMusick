@@ -162,9 +162,12 @@ export default function YouTubePlayer({ src, audioSrc, currentSong, isPlaying, h
         key={audioSrc}
         ref={audioRef}
         src={audioSrc}
-        preload="none"
+        preload="metadata"
         className="mr-yt-hidden"
         onLoadedMetadata={(event) => onTimeUpdate(0, event.currentTarget.duration)}
+        onCanPlay={(event) => {
+          if (isPlaying) event.currentTarget.play().catch(() => {});
+        }}
         onTimeUpdate={(event) => onTimeUpdate(event.currentTarget.currentTime, event.currentTarget.duration)}
         onEnded={onEnded}
       />
